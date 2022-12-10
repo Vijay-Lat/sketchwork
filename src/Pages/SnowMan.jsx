@@ -5,6 +5,9 @@ const SnowMan = () => {
   const snowManRef = useRef();
   useLayoutEffect(() => {
     const ctx = snowManRef?.current?.getContext("2d");
+    ctx.fillStyle="#22E7F9"
+    ctx.rect(0,0,snowManRef?.current?.width,snowManRef?.current?.height)
+    ctx.fill()
     ctx.beginPath();
     ctx.arc(250, 400, 80, 0, 2 * Math.PI);
     ctx.fillStyle = "white";
@@ -44,6 +47,7 @@ const SnowMan = () => {
   return (
     <div className={styles.snowManContainer}>
       <canvas ref={snowManRef} width={500} height={500}></canvas>
+      <button onClick={()=>window.print()}>Print</button>
     </div>
   );
 };

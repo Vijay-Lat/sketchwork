@@ -2,11 +2,26 @@
     background-color: yellow;
 }
 .snowManContainer{
-    display: flex;
-    justify-content: center;
-    margin-top: 50vh;
-    margin-bottom: 50vh;
+    text-align: center;
 }
-.snowManContainer canvas {
+   
+/* .snowManContainer canvas {
     background-color: #22E7F9;
+} */
+.circleContainer{
+    margin-top: 2%;
+    margin-left: 25%;
+}
+
+.gifContainer{
+ margin-top: 10vh;
+
+}
+
+
+
+@media print{
+    button{
+        display: none;
+    }
 }
