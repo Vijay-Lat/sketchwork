@@ -1,18 +1,19 @@
+import { Suspense, lazy } from 'react';
 import Drawing from './Pages/Drawing';
 import Square from './Pages/Square';
 import SnowMan from './Pages/SnowMan';
 import AnimateCircle from './Pages/AnimateCircle';
-import GifCreator from './Pages/GifCreator';
+const GifCreator = lazy(()=>import('./Pages/GifCreator')) ;
 
 function App() {
   return (
-   <div>
+   <Suspense fallback={<div>Loading...</div>}>
     {/* <Drawing/> */}
     {/* <Square/> */}
     {/* <SnowMan/> */}
     {/* <AnimateCircle/> */}
     <GifCreator/>
-   </div>
+   </Suspense>
   );
 }
 

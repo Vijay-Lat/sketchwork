@@ -18,7 +18,10 @@
 
 }
 
-
+.downloadButton{
+    text-transform: none;
+    background-color: coral;
+}
 
 @media print{
     button{
